@@ -1,0 +1,13 @@
+{
+  "name": "Smaakenzzo",
+  "short_name": "Smaakenzzo",
+  "description": "Indulge in Every Bite — Premium desserts, waffles, milkshakes and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F3F0",
+  "theme_color": "#B78A33",
+  "orientation": "portrait",
+  "icons": [
+    {"src": "/assets/design-preview.png", "sizes": "512x512", "type": "image/jpeg"}
+  ]
+}

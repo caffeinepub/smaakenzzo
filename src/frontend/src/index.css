@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    /* Background: warm off-white #F6F3F0 -> oklch(0.965 0.008 60) */
+    --background: 0.965 0.008 60;
+    /* Foreground: deep dark #1F1F1F -> oklch(0.18 0 0) */
+    --foreground: 0.18 0 0;
+    /* Card: white */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0 0;
+    /* Primary: brand gold #C6A25A -> oklch(0.71 0.1 75) */
+    --primary: 0.71 0.1 75;
+    --primary-foreground: 0.18 0 0;
+    /* Secondary: blush pink #D8B3B8 -> oklch(0.8 0.05 10) */
+    --secondary: 0.8 0.05 10;
+    --secondary-foreground: 0.18 0 0;
+    /* Muted */
+    --muted: 0.94 0.006 60;
+    --muted-foreground: 0.5 0.01 60;
+    /* Accent gold #C9A24F -> oklch(0.7 0.1 73) */
+    --accent: 0.7 0.1 73;
+    --accent-foreground: 0.18 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.008 60;
+    --input: 0.92 0.008 60;
+    --ring: 0.71 0.1 75;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.71 0.1 75;
+    --sidebar-primary-foreground: 0.18 0 0;
+    --sidebar-accent: 0.94 0.008 60;
+    --sidebar-accent-foreground: 0.18 0 0;
+    --sidebar-border: 0.9 0.008 60;
+    --sidebar-ring: 0.71 0.1 75;
+    /* Custom tokens */
+    --gold: 0.71 0.1 75;
+    --gold-dark: 0.62 0.1 73;
+    --gold-light: 0.78 0.09 76;
+    --blush: 0.8 0.05 10;
+    --blush-badge: 0.75 0.07 10;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", "DM Sans", system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, oklch(0.62 0.1 73), oklch(0.78 0.09 76));
+  }
+  .bg-nav-gradient {
+    background: linear-gradient(to right, #b78a33, #d2b36a);
+  }
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+  .text-blush {
+    color: oklch(var(--blush));
+  }
+  .bg-blush {
+    background-color: oklch(var(--blush));
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
